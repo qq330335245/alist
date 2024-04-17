@@ -105,12 +105,12 @@ func (d *Local) FileInfoToObj(f fs.FileInfo, reqPath string, fullPath string) mo
 		size = f.Size()
 	}
 	var ctime time.Time
-	t, err := times.Stat(stdpath.Join(fullPath, f.Name()))
-	if err == nil {
-		if t.HasBirthTime() {
-			ctime = t.BirthTime()
-		}
-	}
+	// t, err := times.Stat(stdpath.Join(fullPath, f.Name()))
+	// if err == nil {
+	// 	if t.HasBirthTime() {
+	// 		ctime = t.BirthTime()
+	// 	}
+	// }
 
 	file := model.ObjThumb{
 		Object: model.Object{
