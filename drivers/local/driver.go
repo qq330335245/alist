@@ -157,12 +157,12 @@ func (d *Local) Get(ctx context.Context, path string) (model.Obj, error) {
 		size = 0
 	}
 	var ctime time.Time
-	t, err := times.Stat(path)
-	if err == nil {
-		if t.HasBirthTime() {
-			ctime = t.BirthTime()
-		}
-	}
+	// t, err := times.Stat(path)
+	// if err == nil {
+	// 	if t.HasBirthTime() {
+	// 		ctime = t.BirthTime()
+	// 	}
+	// }
 	file := model.Object{
 		Path:     path,
 		Name:     f.Name(),
